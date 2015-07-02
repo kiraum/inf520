@@ -1,0 +1,13 @@
+127.0.0.1	localhost
+127.0.1.1	beastie
+
+10.69.0.1	beastie
+10.0.69.1	beastie
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+fc00:10:69:0:1::1	beastie
+fc00:10:0:69:1::1	beastie
