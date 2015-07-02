@@ -1,0 +1,9 @@
+GW -> cliente -> how to:
+
+cp vms/cliente/etc/hostname /etc/
+
+cp vms/cliente/etc/hosts /etc/
+
+cp vms/cliente/etc/interfaces /etc/network/
+
+cp vms/cliente/etc/resolv.conf /etc/
