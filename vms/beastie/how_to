@@ -15,3 +15,9 @@ cp vms/beastie/etc/unbound.conf /etc/unbound/unbound.conf.d/
 cp vms/beastie/etc/tinyproxy.conf /etc/
 
 cp vms/beastie/etc/filter /etc/
+
+cp vms/beastie/etc/interfaces /etc/network/interfaces
+
+cp vms/beastie/etc/hosts /etc/hosts
+
+cp vms/beastie/etc/dhcpd* /etc/dhcp/
