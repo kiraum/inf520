@@ -10,6 +10,8 @@ apt-get -y install tinyproxy
 
 apt-get -y install isc-dhcp-server
 
+apt-get -y install softflowd
+
 cp vms/beastie/etc/unbound.conf /etc/unbound/unbound.conf.d/
 
 cp vms/beastie/etc/tinyproxy.conf /etc/
@@ -21,3 +23,7 @@ cp vms/beastie/etc/interfaces /etc/network/interfaces
 cp vms/beastie/etc/hosts /etc/hosts
 
 cp vms/beastie/etc/dhcpd* /etc/dhcp/
+
+cp vms/beastie/etc/sysctl.conf /etc/
+
+cp vms/beastie/etc/softflowd /etc/default/
