@@ -3,3 +3,13 @@ GW -> beastie -> how to:
 apt-get update
 
 apt-get -y nfdump
+
+cp vms/joaquina/etc/nfdump /etc/default/
+
+cp vms/joaquina/etc/hostname /etc/
+
+cp vms/joaquina/etc/hosts /etc/
+
+cp vms/joaquina/etc/interfaces /etc/network/
+
+cp vms/joaquina/etc/resolv.conf /etc/

@@ -1,5 +1,7 @@
 GW -> beastie -> how to:
 
+Se precisar de NAT nas outras vms -> iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
 apt-get update
 
 apt-get -y install unbound
@@ -19,6 +21,8 @@ cp vms/beastie/etc/tinyproxy.conf /etc/
 cp vms/beastie/etc/filter /etc/
 
 cp vms/beastie/etc/interfaces /etc/network/interfaces
+
+cp vms/beastie/etc/hostname /etc/
 
 cp vms/beastie/etc/hosts /etc/hosts
 
