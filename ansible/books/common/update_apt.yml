@@ -1,0 +1,8 @@
+---
+- hosts: all
+  sudo: yes
+  sudo_user: base
+  tasks:
+
+  - name: Garantindo pacotes atualizados
+    apt: update_cache=yes

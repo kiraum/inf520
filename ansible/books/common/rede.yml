@@ -1,0 +1,14 @@
+---
+- hosts: all
+  sudo: yes
+  sudo_user: base
+  tasks:
+
+  - name: Alterando a configuracao de rede
+    copy: src=../../../vms/{{hostname}}/etc/interfaces dest=/etc/network/interfaces owner=root group=root mode=644
+
+  - name: Alterando o hostname
+    copy: src=../../../vms/{{hostname}}/etc/hostname dest=/etc/hostname owner=root group=root mode=644
+
+  - name: Alterando o arquivo hosts
+    copy: src=../../../vms/{{hostname}}/etc/hosts dest=/etc/hosts owner=root group=root mode=644

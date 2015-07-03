@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.56.5
+  remote_user: base
+  sudo_user: root
+  sudo: yes
+  tasks:
+
+  - name: Baixando NFDUMP
+    apt: name=nfdump update_cache=yes
+

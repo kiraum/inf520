@@ -1,0 +1,21 @@
+---
+- hosts: 192.168.56.1
+  remote_user: base
+  sudo_user: root
+  sudo: yes
+  tasks:
+
+  - name: Baixando unbound
+    apt: name=unbound update_cache=yes
+
+  - name: Baixando e removendo configuracoes de bind9
+    apt: name=bind9 purge=yes
+
+  - name: Baixando tinyproxy
+    apt: name=tinyproxy
+
+  - name: Baixando isc-dhcp-server
+    apt: name=isc-dhcp-server
+
+  - name: Baixando softflow
+    apt: name=softflowd

@@ -1,0 +1,8 @@
+---
+- hosts: 192.168.56.1
+  sudo_user: base
+  sudo: yes
+  tasks:
+
+  - name: Configurando unbound
+    copy: src=../../../vms/{{hostname}}/etc/unbound.conf dest=/etc/unbound/unbound.conf.d/unbound.conf owner=root group=root mode=644

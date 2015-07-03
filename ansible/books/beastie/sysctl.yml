@@ -1,0 +1,8 @@
+---
+- hosts: 192.168.56.1
+  sudo_user: base
+  sudo: yes
+  tasks:
+
+  - name: Configurando sysctl
+    copy: src=../../../vms/{{hostname}}/etc/sysctl.conf dest=/etc/ owner=root group=root mode=644

@@ -1,0 +1,17 @@
+[gateway]
+192.168.56.1 ansible_ssh_port=22 ansible_ssh_user=base ansible_ssh_pass=base hostname=beastie
+
+[webserver]
+192.168.56.2 ansible_ssh_port=22 ansible_ssh_user=base ansible_ssh_pass=base hostname=rita
+
+[fileserver]
+192.168.56.3 ansible_ssh_port=22 ansible_ssh_user=base ansible_ssh_pass=base hostname=maria 
+
+[managementServer]
+192.168.56.4 ansible_ssh_port=22 ansible_ssh_user=base ansible_ssh_pass=base hostname=madalena
+
+[dnsServer]
+192.168.56.5 ansible_ssh_port=22 ansible_ssh_user=base ansible_ssh_pass=base hostname=joaquina
+
+[xServer]
+192.168.56.6 ansible_ssh_port=22 ansible_ssh_user=base ansible_ssh_pass=base hostname=helena
