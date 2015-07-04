@@ -4,6 +4,8 @@ apt-get update
 
 apt-get -y nfdump
 
+apt-get -y install snmpd
+
 cp vms/joaquina/etc/nfdump /etc/default/
 
 cp vms/joaquina/etc/hostname /etc/
@@ -13,3 +15,7 @@ cp vms/joaquina/etc/hosts /etc/
 cp vms/joaquina/etc/interfaces /etc/network/
 
 cp vms/joaquina/etc/resolv.conf /etc/
+
+cp vms/joaquina/etc/snmpd.conf /etc/snmp/
+
+cp vms/joaquina/etc/rsyslog.conf /etc/

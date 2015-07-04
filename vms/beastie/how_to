@@ -1,7 +1,5 @@
 GW -> beastie -> how to:
 
-Se precisar de NAT nas outras vms -> iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-
 apt-get update
 
 apt-get -y install unbound
@@ -13,6 +11,8 @@ apt-get -y install tinyproxy
 apt-get -y install isc-dhcp-server
 
 apt-get -y install softflowd
+
+apt-get -y install snmpd
 
 cp vms/beastie/etc/unbound.conf /etc/unbound/unbound.conf.d/
 
@@ -31,3 +31,9 @@ cp vms/beastie/etc/dhcpd* /etc/dhcp/
 cp vms/beastie/etc/sysctl.conf /etc/
 
 cp vms/beastie/etc/softflowd /etc/default/
+
+cp vms/beastie/etc/rc.local /etc/
+
+cp vms/beastie/etc/snmpd.conf /etc/snmp/
+
+cp vms/beastie/etc/rsyslog.conf /etc/

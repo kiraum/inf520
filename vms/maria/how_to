@@ -1,0 +1,31 @@
+GW -> maria -> how to:
+
+apt-get update
+
+apt-get -y install mysql-server {admin/123mudar}
+
+apt-get -y install icinga-web {icingaadmin/123mudar}
+
+usermod -a -G nagios www-data
+
+apt-get -y install snmpd
+
+apt-get -y install cacti
+
+cp vms/maria/etc/icinga /etc/default/icinga
+
+cp vms/maria/etc/inf520_hosts.cfg /etc/icinga/objects/
+
+cp vms/maria/etc/hostgroups_icinga.cfg /etc/icinga/objects/
+
+cp vms/maria/etc/contacts_icinga.cfg /etc/icinga/objects/
+
+cp vms/maria/etc/hostname /etc/
+
+cp vms/maria/etc/hosts /etc/hosts
+
+cp vms/maria/etc/interfaces /etc/network/interfaces
+
+cp vms/maria/etc/rsyslog.conf /etc/
+
+cp vms/maria/etc/snmpd.conf /etc/snmp/
