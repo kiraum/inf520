@@ -1,8 +1,7 @@
 ---
 - hosts: 192.168.56.1
-  sudo_user: base
-  sudo: yes
+  remote_user: root
   tasks:
 
   - name: Configurando filter
-    copy: src=../../../vms/{{hostname}}/etc/filter dest=/etc/filter owner=root group=root mode=644
+    copy: src=../../../vms/{{hostname}}/etc/filter dest=/etc/filter mode=644

@@ -1,8 +1,6 @@
 ---
 - hosts: 192.168.56.1
-  remote_user: base
-  sudo_user: root
-  sudo: yes
+  remote_user: root
   tasks:
 
   - name: Baixando unbound
