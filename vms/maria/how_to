@@ -2,8 +2,6 @@ GW -> maria -> how to:
 
 apt-get update
 
-apt-get -y install mysql-server {admin/123mudar}
-
 apt-get -y install icinga-web {icingaadmin/123mudar}
 
 usermod -a -G nagios www-data
@@ -11,6 +9,8 @@ usermod -a -G nagios www-data
 apt-get -y install snmpd
 
 apt-get -y install cacti
+
+mkdir /var/log/files
 
 cp vms/maria/etc/icinga /etc/default/icinga
 
@@ -29,3 +29,5 @@ cp vms/maria/etc/interfaces /etc/network/interfaces
 cp vms/maria/etc/rsyslog.conf /etc/
 
 cp vms/maria/etc/snmpd.conf /etc/snmp/
+
+echo "10.0.69.2:/export/files   /var/log/files   nfs    auto  0  0¨ >> /etc/fstab

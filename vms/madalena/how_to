@@ -1,0 +1,13 @@
+GW -> madalena -> how to:
+
+apt-get update
+
+apt-get -y install snmpd
+
+cp vms/madalena/etc/hostname /etc/
+
+cp vms/madalena/etc/hosts /etc/hosts
+
+cp vms/madalena/etc/interfaces /etc/network/interfaces
+
+cp vms/madalena/etc/snmpd.conf /etc/snmp/
