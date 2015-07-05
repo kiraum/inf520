@@ -1,0 +1,13 @@
+GW -> helena -> how to:
+
+apt-get update
+
+apt-get -y install snmpd
+
+cp vms/helena/etc/hostname /etc/
+
+cp vms/helena/etc/hosts /etc/hosts
+
+cp vms/helena/etc/interfaces /etc/network/interfaces
+
+cp vms/helena/etc/snmpd.conf /etc/snmp/
