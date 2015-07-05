@@ -1,8 +1,10 @@
 ---
-- hosts: 192.168.56.5
-  sudo_user: base
-  sudo: yes
+- hosts: 192.168.56.1
+  remote_user: root
   tasks:
 
-  - name: Configurando NFDUMP
-    copy: src=../../../vms/{{hostname}}/etc/nfdump dest=/etc/default/nfdump owner=root group=root mode=644
+  - name: Configurando DHCPd
+    copy: src="../../../vms/{{hostname}}/etc/dhcpd.conf" dest="/etc/dhcp/dhcpd.conf" mode=644
+
+  - name: Configurando DHCPd6
+    copy: src="../../../vms/{{hostname}}/etc/dhcpd6.conf" dest="/etc/dhcp/dhcpd6.conf" mode=644
