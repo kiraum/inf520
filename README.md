@@ -4,7 +4,8 @@ Configuraçõess e documentação do ambiente proposto para inf520.
 
 -----------------------------------------------------------------------
 
-beastie
+beastie - Iptables fazendo nat para a wan, forwarding intraredes, proxy(Tinyproxy) para controle de acesso, dns recursivo(Unbound) para utilização das redes internas e dhcp v4/v6 (ISC Dhcp Server) para atribuição de endereço na rede clientes. 
+status - ok.
 
 eth0 - nat
 10.0.2.15
@@ -23,7 +24,8 @@ fc00:10:0:69::1/64
 
 -----------------------------------------------------------------------
 
-rita
+rita - NFS para armazenamento do servidor de logs e MySQL centralizado.
+status - ok.
 
 eth0 - mgmt
 192.168.56.2/24
@@ -35,7 +37,8 @@ fc00:10:0:69::2/64
 
 -----------------------------------------------------------------------
 
-maria
+maria - Icinga(baseado em nagios) para monitamento de ativos, Cacti para gerar gráficos(dados) via rrdtool e servidor de logs centralizado via rsyslogd.
+statis - ok
 
 eth0 - mgmt
 192.168.56.3/24
@@ -47,7 +50,8 @@ fc00:10:0:69::3/64
 
 -----------------------------------------------------------------------
 
-madalena
+madalena - Servidor web, mail e ftp.
+status - ?
 
 eth0 - mgmt
 192.168.56.4/24
@@ -59,7 +63,8 @@ fc00:10:0:69::4/64
 
 -----------------------------------------------------------------------
 
-joaquina
+joaquina - Coletor netflow.
+status - ok
 
 eth0 - mgmt
 192.168.56.5/24
@@ -71,7 +76,8 @@ fc00:10:0:69::5/64
 
 -----------------------------------------------------------------------
 
-helena
+helena - DNS autoritativo.
+status - ?
 
 eth0 - mgmt
 192.168.56.6/24
@@ -83,7 +89,7 @@ fc00:10:0:69::6/64
 
 -----------------------------------------------------------------------
 
-cliente
+cliente - Cliente para teste dos serviços.
 
 eth0 - mgmt
 192.168.56.7/24
