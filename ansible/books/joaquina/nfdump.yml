@@ -1,10 +1,10 @@
 ---
-- hosts: 192.168.56.5
-  remote_user: base
-  sudo_user: root
-  sudo: yes
-  tasks:
+#- hosts: 192.168.56.5
+#  remote_user: root
+#  tasks:
 
   - name: Baixando NFDUMP
     apt: name=nfdump update_cache=yes
 
+  - name: Configurando NFDUMP
+    copy: src=../../../vms/{{hostname}}/etc/nfdump dest=/etc/default/nfdump owner=root group=root mode=644

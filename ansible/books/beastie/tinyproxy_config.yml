@@ -1,7 +1,7 @@
 ---
-- hosts: 192.168.56.1
-  remote_user: root
-  tasks:
+#- hosts: 192.168.56.1
+#  remote_user: root
+#  tasks:
 
   - name: Configurando tinyflow
     copy: src=../../../vms/{{hostname}}/etc/tinyproxy.conf dest=/etc/tinyproxy.conf mode=644

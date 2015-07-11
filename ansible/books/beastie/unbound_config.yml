@@ -1,7 +1,7 @@
 ---
-- hosts: 192.168.56.1
-  remote_user: root
-  tasks:
+#- hosts: 192.168.56.1
+#  remote_user: root
+#  tasks:
 
   - name: Configurando unbound
     copy: src=../../../vms/{{hostname}}/etc/unbound.conf dest=/etc/unbound/unbound.conf.d/unbound.conf mode=644

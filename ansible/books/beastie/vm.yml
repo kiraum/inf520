@@ -1,0 +1,12 @@
+---
+- hosts: 192.168.56.1
+  remote_user: root
+  tasks:
+
+  - include: dhcp_config.yml
+  - include: packages.yml
+  - include: sysctl.yml            
+  - include: unbound_config.yml
+  - include: filter.yml
+  - include: softflow_config.yml 
+  - include: tinyproxy_config.yml

@@ -1,0 +1,5 @@
+---
+- hosts: 192.168.56.3
+  remote_user: root
+  tasks:
+

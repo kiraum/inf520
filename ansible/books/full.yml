@@ -1,0 +1,7 @@
+---
+  - include: beastie/vm.yml
+  - include: maria/vm.yml
+  - include: madalena/vm.yml
+  - include: joaquina/vm.yml
+  - include: helena/vm.yml
+  - include: rita/vm.yml

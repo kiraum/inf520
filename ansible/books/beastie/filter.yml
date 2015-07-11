@@ -1,7 +1,7 @@
 ---
-- hosts: 192.168.56.1
-  remote_user: root
-  tasks:
+#- hosts: 192.168.56.1
+#  remote_user: root
+#  tasks:
 
   - name: Configurando filter
     copy: src=../../../vms/{{hostname}}/etc/filter dest=/etc/filter mode=644
