@@ -1,0 +1,4 @@
+---
+  - include: rede.yml
+  - include: pam.yml
+  - include: update_apt.yml

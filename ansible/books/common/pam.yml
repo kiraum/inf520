@@ -1,0 +1,13 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+
+  - name: Alterando permissao de conexao do root no sshd
+    copy: src=../../../vms/common/sshd_config dest=/etc/ssh/sshd_config owner=root group=root mode=644
+
+  - name: Alterando PAM do SSH para permitir acesso controlado (pam_access)
+    copy: src=../../../vms/common/sshd dest=/etc/pam.d/sshd owner=root group=root mode=644
+
+  - name: Alterando access para conter login do root apenas do servidor de config e de base dos outros servidores
+    copy: src=../../../vms/common/access.conf dest=/etc/security/access.conf owner=root group=root mode=644

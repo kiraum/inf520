@@ -2,7 +2,17 @@ Para usar o ansible em todas as máquinas, primeiro crie uma senha do usuário r
 sudo su
 passwd
 
-Depois disso, altere a autenticação dos hosts para PAM liberar acesso ssh do root apenas a sua máquina com o ansible:
+Depois disso, altere a autenticação dos hosts para liberar acesso SSH do root, alterando o arquivo "/etc/ssh/sshd_config" conforme o seguinte:
+
+Troque "PermitRootLogin no" para "PermitRootLogin yes"
+
+Reinicie o serviço de ssh com:
+
+sudo service ssh restart
+
+Logo em seguida, para restringir o acesso e configurar as interfaces de rede, executar os playbooks da pasta common:
+
+ansible-playbook common.yml -k
 
 Então, para cada VM, basta executar o playbook com o nome "vm.yml", dentro da pasta "books/<nome da VM>",
 ou então o playbook "full.yml" dentro da pasta "books".
