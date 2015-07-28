@@ -1,0 +1,85 @@
+
+sudo vim /etc/bind/named.conf.local
+zone "inf520.org" {
+      type master;
+      file "/etc/bind/zones/inf520.org";
+};
+
+zone "0.69.10.in-addr.arpa" {
+type master;
+file "/etc/bind/zones/rev.0.69.10.in-addr.arpa";
+};
+
+zone "0.0.0.0.9.6.0.0.0.1.0.0.0.0.c.f.ip6.arpa" {
+type master;
+file "/etc/bind/zones/ip6.arpa";
+};
+
+
+
+sudo vim /etc/bind/zones/inf520.org
+
+$TTL 604800
+@ IN SOA inf520.org. admin.inf520.org. (
+2009051301 ; Serial
+7200 ; Refresh
+120 ; Retry
+2419200 ; Expire
+604800) ; Default TTL
+;
+@ IN NS helena.inf520.org.
+
+helena.inf520.org. IN MX 10 mail.inf520.org
+helena.inf520.org. IN A 10.69.0.6
+helena.inf520.org.  IN AAAA fc00:69::6
+www IN CNAME helena.inf520.org.
+mail IN A 10.69.0.6
+
+
+
+Zona reversa
+sudo nano /etc/bind/zones/rev.0.69.10.in-addr.arpa
+
+$TTL 604800
+@         IN        SOA   ns1.inf520.org. admin.inf520.com.br. (
+          2013120400 ; Serial
+          604800     ; Refresh
+          86400      ; Retry
+          2419200    ; Expire
+          604800 )   ; Negative Cache TTL
+;
+                   NS    helena.inf520.org.
+                   NS    helena.inf520.org.
+
+6           PTR   helena.inf520.org.
+
+nano /etc/bind/zones/ip6.arpa
+
+
+$TTL 6h ; Default TTL
+@       IN      SOA     inf520.org      admin (
+        2015062901      ; serial
+        1h              ; slave refresh interval
+        15m             ; slave retry interval
+        1w              ; slave copy expire time
+        1h              ; NXDOMAIN cache time
+        )
+
+;
+@       IN      NS      helena.inf520.org.
+
+
+; IPv6 PTR entries
+6.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.    IN    PTR    helena.inf520.org.
+
+
+
+
+
+Testando o servidor DNS
+
+Modifique o arquivo /etc/resolv.conf com as seguintes configurações
+sudo vim /etc/resolv.conf
+
+search inf520.org
+nameserver 10.69.0.6

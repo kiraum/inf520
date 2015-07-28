@@ -1,0 +1,15 @@
+$TTL 6h ; Default TTL
+@       IN      SOA     inf520.org      admin (
+        2015062901      ; serial
+        1h              ; slave refresh interval
+        15m             ; slave retry interval
+        1w              ; slave copy expire time
+        1h              ; NXDOMAIN cache time
+        )
+
+;
+@       IN      NS      helena.inf520.org.
+
+
+; IPv6 PTR entries
+6.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.    IN    PTR    helena.inf520.org.

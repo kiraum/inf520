@@ -1,0 +1,15 @@
+zone "inf520.org" {
+      type master;
+      file "/etc/bind/zones/inf520.org";
+};
+
+zone "0.69.10.in-addr.arpa" {
+type master;
+file "/etc/bind/zones/rev.0.69.10.in-addr.arpa";
+};
+
+zone "0.0.0.0.9.6.0.0.0.1.0.0.0.0.c.f.ip6.arpa" {
+type master;
+file "/etc/bind/zones/ip6.arpa";
+};
+
