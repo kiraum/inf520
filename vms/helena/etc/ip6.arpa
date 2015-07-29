@@ -12,4 +12,9 @@ $TTL 6h ; Default TTL
 
 
 ; IPv6 PTR entries
-6.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.    IN    PTR    helena.inf520.org.
+6.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0    IN    PTR    helena.inf520.org.
+5.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0    IN    PTR    joaquina.inf520.org.
+4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0    IN    PTR    madalena.inf520.org.
+3.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0    IN    PTR    maria.inf520.org.
+2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0    IN    PTR    rita.inf520.org.
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0    IN    PTR    beastie.inf520.org.

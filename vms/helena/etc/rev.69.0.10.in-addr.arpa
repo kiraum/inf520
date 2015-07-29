@@ -1,0 +1,16 @@
+$TTL 604800
+@         IN        SOA   ns1.inf520.org. admin.inf520.com.br. (
+          2013120400 ; Serial
+          604800     ; Refresh
+          86400      ; Retry
+          2419200    ; Expire
+          604800 )   ; Negative Cache TTL
+;
+            NS    helena.inf520.org.
+
+6           PTR   helena.inf520.org.
+5           PTR   joaquina.inf520.org.
+4           PTR   madalena.inf520.org.
+3           PTR   maria.inf520.org.
+2           PTR   rita.inf520.org.
+1           PTR   beastie.inf520.org.

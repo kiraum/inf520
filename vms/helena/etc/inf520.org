@@ -1,0 +1,26 @@
+$TTL 604800
+@ IN SOA inf520.org. admin.inf520.org. (
+        2009051301 ; Serial
+        7200 ; Refresh
+        120 ; Retry
+        2419200 ; Expire
+        604800) ; Default TTL
+        ;
+@ IN NS helena.inf520.org.
+
+madalena.inf520.org. IN MX 10 mail.inf520.org
+helena.inf520.org. IN A 10.0.69.6
+helena.inf520.org.  IN AAAA fc00:10:0:69::6
+maria.inf520.org. IN A 10.0.69.3
+maria.inf520.org.  IN AAAA fc00:10:0:69::3
+madalena.inf520.org. IN A 10.0.69.4
+madalena.inf520.org.  IN AAAA fc00:10:0:69::4
+beastie.inf520.org. IN A 10.0.69.1
+beastie.inf520.org.  IN AAAA fc00:10:0:69::1
+joaquina.inf520.org. IN A 10.0.69.5
+joaquina.inf520.org.  IN AAAA fc00:10:0:69::5
+rita.inf520.org. IN A 10.0.69.2
+rita.inf520.org.  IN AAAA fc00:10:0:69::2
+www IN CNAME madalena.inf520.org.
+mail IN A 10.0.69.4
+

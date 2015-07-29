@@ -29,7 +29,6 @@ netmask 64
 auto eth3
 iface eth3 inet static
 address 10.69.0.1/24
-dns-nameservers 10.0.69.1
 
 iface eth3 inet6 static
 address fc00:10:69:0::1

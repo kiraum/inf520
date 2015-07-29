@@ -1,0 +1,7 @@
+---
+#- hosts: 192.168.56.1
+#  remote_user: root
+#  tasks:
+
+  - name: Configurando rc.local
+    copy: src=../../../vms/{{hostname}}/etc/rc.local dest=/etc/rc.local mode=644

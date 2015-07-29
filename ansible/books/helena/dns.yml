@@ -1,0 +1,22 @@
+---
+- hosts: 192.168.56.6
+  remote_user: root
+  tasks:
+
+  - name: Configurando DNS (local)
+    copy: src=../../../vms/{{hostname}}/etc/named.conf.local dest=/etc/bind/named.conf.local mode=644
+
+  - name: Configurando DNS (options)
+    copy: src=../../../vms/{{hostname}}/etc/named.conf.options dest=/etc/bind/named.conf.options mode=644
+
+  - name: Creates directory
+    file: path=/etc/bind/zones state=directory
+
+  - name: Configurando DNS (reverso IPv6)
+    copy: src=../../../vms/{{hostname}}/etc/ip6.arpa dest=/etc/bind/zones/ip6.arpa mode=644
+
+  - name: Configurando DNS (reverso)
+    copy: src=../../../vms/{{hostname}}/etc/rev.69.0.10.in-addr.arpa dest=/etc/bind/zones/rev.69.0.10.in-addr.arpa mode=644
+
+  - name: Configurando DNS (zona inf-520)
+    copy: src=../../../vms/{{hostname}}/etc/inf520.org dest=/etc/bind/zones/inf520.org mode=644
