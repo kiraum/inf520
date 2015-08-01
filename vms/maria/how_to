@@ -12,7 +12,7 @@ apt-get -y install cacti
 
 mkdir /var/log/files
 
-cp vms/maria/etc/icinga /etc/default/icinga
+cp vms/maria/etc/icinga.cfg /etc/default/icinga
 
 cp vms/maria/etc/inf520_hosts.cfg /etc/icinga/objects/
 
