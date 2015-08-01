@@ -30,4 +30,6 @@ cp vms/maria/etc/rsyslog.conf /etc/
 
 cp vms/maria/etc/snmpd.conf /etc/snmp/
 
+cp vms/maria/etc/config.php /usr/share/cacti/site/include 
+
 echo "10.0.69.2:/export/files   /var/log/files   nfs    auto  0  0¨ >> /etc/fstab
