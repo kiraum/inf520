@@ -1,0 +1,16 @@
+---
+#- hosts: 192.168.56.3
+#  remote_user: root
+#  tasks:
+
+  - name: Configurando Icinga
+    copy: src=../../../vms/{{hostname}}/etc/icinga.cfg dest=/etc/default/icinga.cfg mode=644
+
+  - name: Configurando Hosts Icinga
+    copy: src=../../../vms/{{hostname}}/etc/inf520_hosts.cfg dest=/etc/icinga/objects/inf520_hosts.cfg mode=644
+
+  - name: Configurando Hostgroups Icinga
+    copy: src=../../../vms/{{hostname}}/etc/hostgroups_icinga.cfg dest=/etc/icinga/objects/hostgroups_icinga.cfg mode=644
+
+  - name: Configurando Contacts Icinga
+    copy: src=../../../vms/{{hostname}}/etc/contacts_icinga.cfg dest=/etc/icinga/objects/contacts_icinga.cfg mode=644

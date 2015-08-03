@@ -1,0 +1,8 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+
+  - name: Configurando SNMP
+    copy: src=../../../vms/{{hostname}}/etc/snmpd.conf dest=/etc/snmp/snmpd.conf mode=644
+

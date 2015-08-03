@@ -1,0 +1,11 @@
+---
+#- hosts: 192.168.56.3
+#  remote_user: root
+#  tasks:
+
+  - name: Baixando icinga
+    apt: name=icinga-web update_cache=yes
+
+  - name: Baixando cacti
+    apt: name=cacti
+

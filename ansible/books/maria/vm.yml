@@ -3,3 +3,7 @@
   remote_user: root
   tasks:
 
+  - include: packages.yml
+  - include: syslog.yml
+  - include: icinga.yml
+  - include: users.yml

@@ -1,0 +1,8 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+
+  - name: Configurando syslog
+    copy: src=../../../vms/{{hostname}}/etc/rsyslog.conf dest=/etc/rsyslog.conf mode=644
+

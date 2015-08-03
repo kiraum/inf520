@@ -1,0 +1,8 @@
+---
+- hosts: 192.168.56.2
+  remote_user: root
+  tasks:
+
+  - name: Baixando mysql-server
+    apt: name=mysql-server update_cache=yes
+

@@ -4,4 +4,4 @@
 #  tasks:
 
   - name: Configurando rc.local
-    copy: src=../../../vms/{{hostname}}/etc/rc.local dest=/etc/rc.local mode=644
+    copy: src=../../../vms/{{hostname}}/etc/rc.local dest=/etc/rc.local mode=755

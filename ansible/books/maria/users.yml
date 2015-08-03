@@ -1,0 +1,9 @@
+---
+- hosts: 192.168.56.3
+  remote_user: root
+  tasks:
+
+  - name: Adicionando base aos grupos nagios
+  - user: name=base groups=nagios,www-data append=yes
+  
+

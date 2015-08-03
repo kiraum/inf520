@@ -1,3 +1,20 @@
+Configuração do host:
+
+Primeiramente, configurar as variáveis de configuração do ansible:
+
+export ANSIBLE_CONFIG=<caminho para o ansible.cfg do repositorio>
+
+Além disso, mexer no arquivo ansible.cfg do repositório, trocando a linha:
+
+inventory=<caminho para o arquivo de hosts do repositório>
+
+Adicionalmente, instalar o sshpass na própria máquina:
+
+sudo apt-get install sshpass
+
+--------
+Configuração das VMs
+
 Para usar o ansible em todas as máquinas, primeiro crie uma senha do usuário root:
 sudo su
 passwd

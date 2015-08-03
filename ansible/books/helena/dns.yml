@@ -1,7 +1,7 @@
 ---
-- hosts: 192.168.56.6
-  remote_user: root
-  tasks:
+#- hosts: 192.168.56.6
+#  remote_user: root
+#  tasks:
 
   - name: Configurando DNS (local)
     copy: src=../../../vms/{{hostname}}/etc/named.conf.local dest=/etc/bind/named.conf.local mode=644

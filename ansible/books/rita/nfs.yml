@@ -1,0 +1,21 @@
+---
+- hosts: 192.168.56.2
+  remote_user: root
+  tasks:
+
+  - name: Cria diretorio para NFS
+    file: path=/export/files state=directory
+
+  - name: Altera permissões
+    file: path=/export/ state=directory owner=nobody group=adm recurse=yes mode=770
+
+  - name: Configurando hosts permitidos
+    copy: src=../../../vms/{{hostname}}/etc/hosts.allow dest=/etc/hosts.allow mode=644
+
+  - name: Configurando hosts bloqueados 
+    copy: src=../../../vms/{{hostname}}/etc/hosts.deny dest=/etc/hosts.deny mode=644
+
+  - name: Configurando diretórios exportados 
+    copy: src=../../../vms/{{hostname}}/etc/exports dest=/etc/exports mode=644
+
+  - command: /usr/sbin/exportfs -ra

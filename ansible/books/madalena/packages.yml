@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.56.4
+  remote_user: root
+  tasks:
+
+  - name: Baixando postfix
+    apt: name=postfix update_cache=yes
+
+  - name: Baixando courier-imap
+    apt: name=courier-imap

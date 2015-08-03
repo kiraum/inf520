@@ -2,3 +2,5 @@
   - include: rede.yml
   - include: pam.yml
   - include: update_apt.yml
+  - include: snmp.yml
+  - include: syslog.yml 

@@ -1,0 +1,16 @@
+---
+- hosts: 192.168.56.2
+  remote_user: root
+  tasks:
+
+  - name: Configurando MySQL
+    copy: src=../../../vms/{{hostname}}/etc/my.cnf dest=/etc/mysql/my.cnf mode=644
+
+  - name: Configurando base
+    copy: src=../../../vms/{{hostname}}/etc/all.sql dest=/etc/mysql/all.sql mode=644
+
+  - command: mysqladmin -u root password 123mudar
+  - command: mysql -u root -p123mudar < /etc/mysql/all.sql
+  - command: mysql -u root -p123mudar -e "GRANT ALL PRIVILEGES ON `cacti`.* TO 'cacti'@'10.0.69.3';"
+  - command: mysql -u root -p123mudar -e "GRANT ALL PRIVILEGES ON `icinga`.* TO 'icinga-idoutils'@'10.0.69.3';"
+  - command: mysql -u root -p123mudar -e "GRANT ALL PRIVILEGES ON `icinga_web`.* TO 'icinga_web'@'10.0.69.3';"

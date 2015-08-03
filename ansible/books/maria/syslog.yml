@@ -1,0 +1,11 @@
+---
+#- hosts: 192.168.56.6
+#  remote_user: root
+#  tasks:
+
+  - name: Cria diretorio syslog
+    file: path=/var/log/files state=directory
+
+  - name: Configurando SYSLOG
+    copy: src=../../../vms/{{hostname}}/etc/rsyslog.conf dest=/etc/rsyslog.conf mode=644
+

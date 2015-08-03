@@ -1,0 +1,11 @@
+---
+- hosts: 192.168.56.4
+  remote_user: root
+  tasks:
+
+  - name: Configurando master.cf
+    copy: src=../../../vms/{{hostname}}/etc/master.cf dest=/etc/postfix/master.cf mode=644
+
+  - name: Configurando master.cf
+    copy: src=../../../vms/{{hostname}}/etc/main.cf dest=/etc/postfix/main.cf mode=644
+

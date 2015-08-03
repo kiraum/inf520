@@ -3,4 +3,6 @@
   remote_user: root
   tasks:
 
-  - include: dhcp_config.yml
+  - include: packages.yml
+  - include: nfs.yml
+  - include: mysql.yml
