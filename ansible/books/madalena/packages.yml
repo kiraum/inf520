@@ -8,3 +8,6 @@
 
   - name: Baixando courier-imap
     apt: name=courier-imap
+
+  - name: Baixando nginx
+    apt: name=nginx

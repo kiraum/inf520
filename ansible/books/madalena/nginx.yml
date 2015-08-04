@@ -1,0 +1,19 @@
+---
+- hosts: 192.168.56.4
+  remote_user: root
+  tasks:
+
+  - name: Configurando nginx.conf
+    copy: src=../../../vms/{{hostname}}/etc/nginx.conf dest=/etc/nginx/nginx.conf mode=644
+
+  - name: Configurando site disponivel
+    copy: src=../../../vms/{{hostname}}/etc/inf520.org dest=/etc/nginx/sites-available/inf520.org mode=644
+
+  - name: Cria link para o site disponível
+    file: src=/etc/nginx/sites-available/inf520.org dest=/etc/nginx/sites-enabled/inf520.org state=link owner=www-data group=www-data mode=644
+
+  - name: Cria diretorio de conteudo
+    file: path=/etc/nginx/content/ state=directory
+
+  - name: Copiando conteúdo do site
+    copy: src=../../../vms/{{hostname}}/etc/content/ dest=/etc/nginx/content mode=644 owner=www-data group=www-data
