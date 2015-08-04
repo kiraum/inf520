@@ -4,6 +4,12 @@ apt-get update
 
 apt-get -y install snmpd
 
+apt-get -y install postfix
+
+apt-get -y install courier-imap
+
+apt-get -y install nginx
+
 cp vms/madalena/etc/hostname /etc/
 
 cp vms/madalena/etc/hosts /etc/hosts
@@ -11,3 +17,15 @@ cp vms/madalena/etc/hosts /etc/hosts
 cp vms/madalena/etc/interfaces /etc/network/interfaces
 
 cp vms/madalena/etc/snmpd.conf /etc/snmp/
+
+cp vms/madalena/etc/master.cf /etc/postfix/master.cf
+
+cp vms/madalena/etc/main.cf /etc/postfix/main.cf
+
+cp vms/madalena/etc/nginx.conf /etc/nginx/nginx.conf
+
+cp vms/madalena/etc/inf520.org /etc/nginx/sites-available/inf520.org
+
+ln -s /etc/nginx/sites-available/inf520.org /etc/nginx/sites-enabled/inf520.org
+
+cp -r vms/madalena/etc/content /etc/nginx/

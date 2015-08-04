@@ -1,7 +1,7 @@
 ---
-- hosts: 192.168.56.4
-  remote_user: root
-  tasks:
+#- hosts: 192.168.56.4
+#  remote_user: root
+#  tasks:
 
   - name: Configurando nginx.conf
     copy: src=../../../vms/{{hostname}}/etc/nginx.conf dest=/etc/nginx/nginx.conf mode=644

@@ -3,3 +3,7 @@
   remote_user: root
   tasks:
 
+  -include: packages.yml
+  -include: mail.yml
+  -include: nginx.yml
+
