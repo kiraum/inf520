@@ -42,3 +42,10 @@ home_mailbox = Maildir/
 recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = all
+
+virtual_mailbox_domains = inf520.virtual.org
+virtual_mailbox_base = /home/vhosts
+virtual_mailbox_maps = hash:/etc/postfix/vmailbox
+virtual_minimum_uid = 100
+virtual_uid_maps = static:5000
+virtual_gid_maps = static:5000

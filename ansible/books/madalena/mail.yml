@@ -1,11 +1,32 @@
 ---
-#- hosts: 192.168.56.4
-#  remote_user: root
-#  tasks:
+- hosts: 192.168.56.4
+  remote_user: root
+  tasks:
 
-  - name: Configurando master.cf
+  - name: Configurando master.cf (postfix)
     copy: src=../../../vms/{{hostname}}/etc/master.cf dest=/etc/postfix/master.cf mode=644
 
-  - name: Configurando master.cf
+  - name: Configurando main.cf (postfix)
     copy: src=../../../vms/{{hostname}}/etc/main.cf dest=/etc/postfix/main.cf mode=644
 
+  - name: Configurando contas virtuais (postfix)
+    copy: src=../../../vms/{{hostname}}/etc/vmailbox dest=/etc/postfix/vmailbox mode=644
+
+  - name: Criando diretorio de emails virtuais
+    file: path=/home/vhosts/inf520.virtual.org state=directory owner=vmail group=vmail
+
+  - command: postmap /etc/postfix/vmailbox
+  - command: postfix reload
+
+  - name: Configurando IMAP
+    copy: src=../../../vms/{{hostname}}/etc/authdaemonrc dest=/etc/courier/authdaemonrc mode=660
+
+  - command: chdir=/etc/courier/ {{ item }}
+    with_items:
+    - userdb usuario set uid=vmail gid=vmail home=/home/vhosts/inf520.virtual.org/usuario mail=/home/vhosts/inf520.virtual.org/usuario
+  - command: chdir=/etc/courier/ {{ item }}
+    with_items:
+    - userdbpw -md5 | userdb usuario set systempw
+  - command: chdir=/etc/courier/ {{ item }}
+    with_items:
+    - makeuserdb

@@ -22,6 +22,24 @@ cp vms/madalena/etc/master.cf /etc/postfix/master.cf
 
 cp vms/madalena/etc/main.cf /etc/postfix/main.cf
 
+cp vms/madalena/etc/vmailbox /etc/postfix/vmailbox
+
+groupadd -g 5000 vmail
+
+useradd -g vmail -u 5000 vmail
+
+mkdir -p /home/vhosts/inf520.virtual.org
+
+chown vmail:vmail /home/vhosts/inf520.virtual.org
+
+cp vms/madalena/etc/authdaemonrc /etc/courier/authdaemonrc
+
+cd /etc/courier/ ; userdb usuario set uid=vmail gid=vmail home=/home/vhosts/inf520.virtual.org/usuario mail=/home/vhosts/inf520.virtual.org/usuario
+
+userdbpw -md5 | userdb usuario set systempw
+
+makeuserdb
+
 cp vms/madalena/etc/nginx.conf /etc/nginx/nginx.conf
 
 cp vms/madalena/etc/inf520.org /etc/nginx/sites-available/inf520.org
