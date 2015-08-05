@@ -1,0 +1,9 @@
+---
+#- hosts: 192.168.56.4
+#  remote_user: root
+#  tasks:
+
+  - group: name=vmail gid=5000 state=present
+  - user: name=vmail groups=vmail uid=5000 
+  
+
