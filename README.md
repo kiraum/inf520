@@ -50,8 +50,8 @@ fc00:10:0:69::3/64
 
 -----------------------------------------------------------------------
 
-madalena - Servidor web, mail e ftp.
-status - ?
+madalena - Servidor web nginx e mail(postfix e courie-imap).
+status - ok
 
 eth0 - mgmt
 192.168.56.4/24
@@ -77,7 +77,7 @@ fc00:10:0:69::5/64
 -----------------------------------------------------------------------
 
 helena - DNS autoritativo.
-status - ?
+status - ok
 
 eth0 - mgmt
 192.168.56.6/24
