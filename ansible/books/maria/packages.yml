@@ -4,7 +4,10 @@
 #  tasks:
 
   - name: Baixando icinga
-    apt: name=icinga-web update_cache=yes
+    apt: name=icinga update_cache=yes
+
+  - name: Baixando icinga web
+    apt: name=icinga-web
 
   - name: Baixando cacti
     apt: name=cacti

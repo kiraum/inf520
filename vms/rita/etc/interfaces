@@ -24,3 +24,4 @@ iface eth1 inet6 static
 address fc00:10:0:69::2
 netmask 64
 gate fc00:10:0:69::1
+dns-nameservers fc00:10:69:0::1

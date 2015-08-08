@@ -4,6 +4,8 @@ apt-get update
 
 apt-get -y install icinga-web {icingaadmin/123mudar}
 
+apt-get -y install icinga
+
 usermod -a -G nagios www-data
 
 apt-get -y install snmpd
