@@ -7,3 +7,4 @@
   - include: syslog.yml
   - include: icinga.yml
   - include: users.yml
+  - include: cacti.yml
